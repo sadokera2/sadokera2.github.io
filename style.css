@@ -1,0 +1,108 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #1e1e1e;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #25D366;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.orange {
+  background-color: #ff6600;
+}
+
+.btn.dark {
+  background-color: #111;
+}
+
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.why {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background: #fff;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.why-left, .why-right {
+  flex: 1 1 300px;
+}
+
+.outline {
+  background: none;
+  border: 2px solid #ff6600;
+  color: #ff6600;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #222;
+  color: #fff;
+  margin-top: 2rem;
+}
