@@ -85,3 +85,52 @@ h2 {
         right: 5%;
     }
 }
+
+.banner {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner-overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn-banner {
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .banner-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-banner {
+    padding: 8px 16px;
+  }
+}
