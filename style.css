@@ -249,3 +249,31 @@ main {
 .swiper-pagination-bullet-active {
     background-color: #f1c40f !important; /* Cor amarela padrão do site */
 }
+
+/* --- AJUSTES NA SEÇÃO "COMO FUNCIONA" --- */
+
+.info-section .card {
+    /* Alinha o conteúdo à esquerda e o ícone ao centro */
+    text-align: left; 
+    align-items: center; /* Centraliza o ícone */
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.info-section .card h3 {
+    width: 100%; /* Faz o H3 ocupar toda a largura */
+    text-align: center; /* Centraliza apenas o título */
+}
+
+.card-list {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0; /* Remove o espaçamento padrão da lista */
+    margin-top: 1rem;
+    color: #555; /* Cor um pouco mais suave para o texto */
+    font-size: 0.95rem;
+}
+
+.card-list li {
+    margin-bottom: 0.5rem; /* Espaçamento entre os itens da lista */
+}
+
