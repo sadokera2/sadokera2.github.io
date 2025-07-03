@@ -40,8 +40,11 @@ main {
     text-align: center;
     color: #fff;
     padding: 1rem;
-    /* Imagem de fundo e efeito de paralaxe */
-    background-image: url('img/frota-banner.jpg');
+    
+    /* === CORREÇÃO ESTÁ AQUI === */
+    /* Usando o caminho completo da sua imagem que já está online */
+    background-image: url('https://www.rrtransportes.srv.br/img/banner-placeholder.jpg'); 
+    
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
