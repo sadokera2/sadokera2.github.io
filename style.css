@@ -278,3 +278,73 @@ main {
     margin-bottom: 0.75rem; /* Espaçamento entre os itens da lista */
 }
 
+/* --- ESTILOS DA SEÇÃO DE CONTATO --- */
+
+.contact-section {
+    padding: 4rem 1rem;
+    background-color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 350px;
+    max-width: 550px;
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-form {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f1c40f;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-form:hover {
+    background-color: #ffde59;
+}
+
