@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RR Transportes - Logística para a Saúde</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -22,17 +21,17 @@
             <h2>Como a <span class="highlight">RRTransportes</span> funciona?</h2>
             <div class="cards-container">
                 <div class="card">
-                    <img src="img/icon1-placeholder.svg" alt="Ícone de Documento com Selo">
+                    <img src="img/icon1-placeholder.png" alt="Ícone de Documento com Selo">
                     <h3>REGULARIZAÇÕES E LICENÇAS</h3>
                     <p>CRF, Alvará, ANVISA, etc.</p>
                 </div>
                 <div class="card">
-                    <img src="img/icon2-placeholder.svg" alt="Ícone de Prancheta e Caneta">
+                    <img src="img/icon2-placeholder.png" alt="Ícone de Prancheta e Caneta">
                     <h3>DOCUMENTAÇÃO E BOAS PRÁTICAS</h3>
                     <p>Procedimentos e treinamentos.</p>
                 </div>
                 <div class="card">
-                    <img src="img/icon3-placeholder.svg" alt="Ícone de Caminhão e Limpeza">
+                    <img src="img/icon3-placeholder.png" alt="Ícone de Caminhão e Limpeza">
                     <h3>TRANSPORTE E HIGIENIZAÇÃO</h3>
                     <p>RNTRC, dedetização e mais.</p>
                 </div>
@@ -59,52 +58,13 @@
         
         <section class="frota-section">
             <h2>Conheça <span class="highlight">nossa frota</span></h2>
-            <div class="swiper frota-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/frota-placeholder.jpg" alt="Caminhão 1 da RR Transportes">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/banner-placeholder.jpg" alt="Caminhão 2 da RR Transportes">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://via.placeholder.com/800x500.png?text=Outro+Caminhão" alt="Caminhão 3 da RR Transportes">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
+            <img src="img/frota-placeholder.jpg" alt="Imagem da frota de caminhões da RR Transportes" class="frota-img">
         </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 RR Transportes. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      const swiper = new Swiper('.frota-slider', {
-        // Optional parameters
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
 
 </body>
 </html>
