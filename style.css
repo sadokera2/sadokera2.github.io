@@ -214,3 +214,38 @@ main {
         max-width: 400px;
     }
 }
+
+/* --- ESTILOS DA GALERIA DA FROTA --- */
+
+.frota-slider {
+    width: 100%;
+    max-width: 900px; /* Largura máxima da galeria */
+    height: 550px; /* Altura da galeria */
+    margin: 0 auto; /* Centraliza a galeria */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.frota-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee; /* Fundo para caso a imagem demore a carregar */
+}
+
+.frota-slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o slide sem distorcer */
+}
+
+/* Estilo personalizado para as setas e bolinhas da galeria */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #f1c40f !important; /* Cor amarela padrão do site */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #f1c40f !important; /* Cor amarela padrão do site */
+}
