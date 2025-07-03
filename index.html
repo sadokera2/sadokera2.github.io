@@ -78,4 +78,41 @@
                         <img src="img/frota-placeholder.jpg" alt="Caminhão 1 da RR Transportes">
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/banner-placeholder.jpg" alt="Camin
+                        <img src="img/banner-placeholder.jpg" alt="Caminhão 2 da RR Transportes">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://via.placeholder.com/800x500.png?text=Sua+Foto+Aqui" alt="Caminhão 3 da RR Transportes">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 RR Transportes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.frota-slider', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    </body>
+</html>
