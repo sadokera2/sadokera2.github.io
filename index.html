@@ -1,118 +1,269 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RR Transportes - Logística para a Saúde</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-    <header class="hero-banner">
-        <div class="hero-content">
-            <h1>TRANSPORTANDO CONFIANÇA PARA TODO O BRASIL</h1>
-            <p>Soluções completas em logística de medicamentos e produtos para a saúde.</p>
-            <a href="https://wa.me/557599509990" target="_blank" class="btn-primary">Solicite um Orçamento</a>
-        </div>
-    </header>
+/* --- RESET BÁSICO E ESTILOS GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <section class="info-section">
-            <h2>Como a <span class="highlight">RRTransportes</span> funciona?</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="img/icon1-placeholder.png" alt="Ícone de Documento com Selo">
-                    <h3>REGULARIZAÇÕES E LICENÇAS</h3>
-                    <ul class="card-list">
-                        <li>Certificado de Regularidade Técnica (CRF)</li>
-                        <li>Alvará de Funcionamento</li>
-                        <li>Inscrição Estadual</li>
-                        <li>Alvará de Vigilância Sanitária</li>
-                        <li>Certificados ANVISA</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <img src="img/icon2-placeholder.png" alt="Ícone de Prancheta e Caneta">
-                    <h3>DOCUMENTAÇÃO E BOAS PRÁTICAS</h3>
-                    <ul class="card-list">
-                        <li>Procedimentos operacionais padronizados <strong>com treinamento constante</strong> conduzido pelo Farmacêutico.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <img src="img/icon3-placeholder.png" alt="Ícone de Caminhão e Limpeza">
-                    <h3>TRANSPORTE E HIGIENIZAÇÃO</h3>
-                    <ul class="card-list">
-                        <li>RNTRC (Registro Nacional de Transporte Terrestre de Carga)</li>
-                        <li>Certificados de Dedetização Veicular</li>
-                        <li>Certificados de Dedetização e Desratização do Local</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
 
-        <section class="services-section">
-            <h2>Nossos <span class="highlight">serviços</span></h2>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="img/service1-placeholder.jpg" alt="Caixas de medicamentos sendo transportadas">
-                    <h3>Medicamentos e vacinas</h3>
-                </div>
-                <div class="card">
-                    <img src="img/service2-placeholder.jpg" alt="Potes de suplementos variados">
-                    <h3>Suplementos em geral</h3>
-                </div>
-                <div class="card">
-                    <img src="img/service3-placeholder.jpg" alt="Equipamentos e materiais hospitalares">
-                    <h3>Linha hospitalar e clínica</h3>
-                </div>
-            </div>
-        </section>
-        
-        <section class="frota-section">
-            <h2>Conheça <span class="highlight">nossa frota</span></h2>
-            <div class="swiper frota-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/frota-placeholder.jpg" alt="Caminhão 1 da RR Transportes">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/banner-placeholder.jpg" alt="Caminhão 2 da RR Transportes">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://via.placeholder.com/800x500.png?text=Sua+Foto+Aqui" alt="Caminhão 3 da RR Transportes">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </section>
-    </main>
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
 
-    <footer class="footer">
-        <p>&copy; 2025 RR Transportes. Todos os direitos reservados.</p>
-    </footer>
+.highlight {
+    color: #f1c40f;
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+main {
+    width: 100%;
+}
 
-    <script>
-      const swiper = new Swiper('.frota-slider', {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
+/* --- HERO BANNER (IMAGEM PRINCIPAL COM TEXTO) --- */
+.hero-banner {
+    position: relative;
+    height: 80vh; 
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    background-image: url('img/banner-placeholder.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
 
-</body>
-</html>
+/* Camada escura sobre a imagem para legibilidade */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem 0;
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #f1c40f;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffde59;
+    transform: scale(1.05);
+}
+
+
+/* --- SEÇÕES DE CONTEÚDO E CARDS --- */
+.info-section, .services-section, .frota-section {
+    padding: 4rem 1rem;
+}
+
+.services-section {
+    background-color: #f7f7f7;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* --- ESTILOS DA SEÇÃO "COMO FUNCIONA" --- */
+.info-section .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo horizontalmente por padrão */
+    padding: 2rem;
+}
+
+.info-section .card img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.info-section .card h3 {
+    text-align: center; /* Garante que o título esteja sempre centralizado */
+}
+
+.info-section .card-list {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0; /* Remove o espaçamento padrão da lista */
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    width: 100%; /* Faz a lista ocupar toda a largura do card */
+    text-align: left; /* Alinha SOMENTE o texto da lista à esquerda */
+}
+
+.info-section .card-list li {
+    margin-bottom: 0.75rem; /* Espaçamento entre os itens da lista */
+}
+
+
+/* --- ESTILOS DA SEÇÃO "SERVIÇOS" --- */
+.services-section .card {
+    text-align: center;
+}
+
+.services-section .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.services-section .card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.services-section .card p {
+    padding: 0 1rem 1rem 1rem;
+    color: #666;
+}
+
+
+/* --- ESTILOS DA GALERIA DA FROTA --- */
+.frota-section {
+    text-align: center;
+}
+
+.frota-slider {
+    width: 100%;
+    max-width: 900px; /* Largura máxima da galeria */
+    height: 550px; /* Altura da galeria */
+    margin: 1rem auto 0 auto; /* Centraliza a galeria e adiciona espaço no topo */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.frota-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee; /* Fundo para caso a imagem demore a carregar */
+}
+
+.frota-slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o slide sem distorcer */
+}
+
+/* Estilo personalizado para as setas e bolinhas da galeria */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #f1c40f !important; /* Cor amarela padrão do site */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #f1c40f !important; /* Cor amarela padrão do site */
+}
+
+
+/* --- RODAPÉ --- */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: #222;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+
+/* --- AJUSTES PARA DISPOSITIVOS MÓVEIS (RESPONSIVIDADE) --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-banner {
+        height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
