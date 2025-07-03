@@ -1,34 +1,238 @@
-/* --- ESTILOS DA GALERIA DA FROTA --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-.frota-slider {
+/* --- RESET BÁSICO E ESTILOS GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.highlight {
+    color: #f1c40f;
+}
+
+main {
     width: 100%;
-    max-width: 900px; /* Largura máxima da galeria */
-    height: 550px; /* Altura da galeria */
-    margin: 0 auto; /* Centraliza a galeria */
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.frota-slider .swiper-slide {
+/* --- HERO BANNER (IMAGEM PRINCIPAL COM TEXTO) --- */
+.hero-banner {
+    position: relative;
+    height: 80vh; 
+    min-height: 500px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: #eee; /* Fundo para caso a imagem demore a carregar */
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    background-image: url('img/banner-placeholder.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
 }
 
-.frota-slider .swiper-slide img {
-    display: block;
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o slide sem distorcer */
+    background: rgba(0, 0, 0, 0.6); 
 }
 
-/* Estilo personalizado para as setas e bolinhas da galeria */
-.swiper-button-next,
-.swiper-button-prev {
-    color: #f1c40f !important; /* Cor amarela padrão do site */
+.hero-content {
+    position: relative; 
+    z-index: 1;
+    max-width: 800px;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #f1c40f !important; /* Cor amarela padrão do site */
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem 0;
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #f1c40f;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffde59;
+    transform: scale(1.05);
+}
+
+
+/* --- SEÇÕES DE CONTEÚDO E CARDS --- */
+.info-section, .services-section, .frota-section {
+    padding: 4rem 1rem;
+}
+
+.services-section {
+    background-color: #f7f7f7;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* --- ESTILOS DA SEÇÃO "COMO FUNCIONA" --- */
+.info-section .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 2rem;
+}
+
+.info-section .card img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.info-section .card h3 {
+    text-align: center; 
+}
+
+.info-section .card-list {
+    list-style: none; 
+    padding: 0; 
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    width: 100%; 
+    text-align: left; 
+}
+
+.info-section .card-list li {
+    margin-bottom: 0.75rem; 
+}
+
+
+/* --- ESTILOS DA SEÇÃO "SERVIÇOS" --- */
+.services-section .card {
+    text-align: center;
+}
+
+.services-section .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.services-section .card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.services-section .card p {
+    padding: 0 1rem 1rem 1rem;
+    color: #666;
+}
+
+/* --- ESTILOS DA SEÇÃO FROTA --- */
+.frota-section {
+    text-align: center;
+}
+.frota-img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+
+/* --- RODAPÉ --- */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: #222;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+
+/* --- AJUSTES PARA DISPOSITIVOS MÓVEIS (RESPONSIVIDADE) --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-banner {
+        height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
 }
