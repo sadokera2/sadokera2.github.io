@@ -253,27 +253,30 @@ main {
 /* --- AJUSTES NA SEÇÃO "COMO FUNCIONA" --- */
 
 .info-section .card {
-    /* Alinha o conteúdo à esquerda e o ícone ao centro */
-    text-align: left; 
-    align-items: center; /* Centraliza o ícone */
-    padding-left: 25px;
-    padding-right: 25px;
+    /* Garante que os itens dentro do card comecem alinhados no topo */
+    align-items: flex-start; 
+    text-align: center; /* Centraliza o título e o ícone */
+}
+
+.info-section .card-list {
+    /* Remove as bolinhas da lista */
+    list-style: none;
+    /* Remove o espaçamento/recuo padrão da lista */
+    padding: 0;
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    /* Alinha o texto da lista à esquerda */
+    text-align: left;
+    width: 100%; /* Garante que a lista ocupe todo o espaço do card */
+}
+
+.info-section .card-list li {
+    margin-bottom: 0.75rem; /* Leve ajuste no espaçamento entre os itens */
+    padding-left: 5px; /* Pequeno recuo para alinhar visualmente */
 }
 
 .info-section .card h3 {
-    width: 100%; /* Faz o H3 ocupar toda a largura */
-    text-align: center; /* Centraliza apenas o título */
-}
-
-.card-list {
-    list-style-type: none; /* Remove as bolinhas da lista */
-    padding: 0; /* Remove o espaçamento padrão da lista */
-    margin-top: 1rem;
-    color: #555; /* Cor um pouco mais suave para o texto */
-    font-size: 0.95rem;
-}
-
-.card-list li {
-    margin-bottom: 0.5rem; /* Espaçamento entre os itens da lista */
+    margin-bottom: 0; /* Remove a margem extra do H3 */
 }
 
