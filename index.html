@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RR Transportes - Logística para a Saúde</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -24,17 +23,29 @@
                 <div class="card">
                     <img src="img/icon1-placeholder.png" alt="Ícone de Documento com Selo">
                     <h3>REGULARIZAÇÕES E LICENÇAS</h3>
-                    <p>CRF, Alvará, ANVISA, etc.</p>
+                    <ul class="card-list">
+                        <li>Certificado de Regularidade Técnica (CRF)</li>
+                        <li>Alvará de Funcionamento</li>
+                        <li>Inscrição Estadual</li>
+                        <li>Alvará de Vigilância Sanitária</li>
+                        <li>Certificados ANVISA</li>
+                    </ul>
                 </div>
                 <div class="card">
                     <img src="img/icon2-placeholder.png" alt="Ícone de Prancheta e Caneta">
                     <h3>DOCUMENTAÇÃO E BOAS PRÁTICAS</h3>
-                    <p>Procedimentos e treinamentos.</p>
+                    <ul class="card-list">
+                        <li>Procedimentos operacionais padronizados <strong>com treinamento constante</strong> conduzido pelo Farmacêutico.</li>
+                    </ul>
                 </div>
                 <div class="card">
                     <img src="img/icon3-placeholder.png" alt="Ícone de Caminhão e Limpeza">
                     <h3>TRANSPORTE E HIGIENIZAÇÃO</h3>
-                    <p>RNTRC, dedetização e mais.</p>
+                    <ul class="card-list">
+                        <li>RNTRC (Registro Nacional de Transporte Terrestre de Carga)</li>
+                        <li>Certificados de Dedetização Veicular</li>
+                        <li>Certificados de Dedetização e Desratização do Local</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -59,51 +70,13 @@
         
         <section class="frota-section">
             <h2>Conheça <span class="highlight">nossa frota</span></h2>
-            
-            <div class="swiper frota-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/frota-placeholder.jpg" alt="Caminhão 1 da RR Transportes">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/banner-placeholder.jpg" alt="Caminhão 2 da RR Transportes">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://via.placeholder.com/800x500.png?text=Sua+Foto+Aqui" alt="Caminhão 3 da RR Transportes">
-                    </div>
-                    </div>
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-
+            <img class="frota-img" src="img/frota-placeholder.jpg" alt="Imagem da frota de caminhões da RR Transportes">
         </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 RR Transportes. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      const swiper = new Swiper('.frota-slider', {
-        loop: true, // Faz a galeria girar em loop
-        autoplay: {
-            delay: 3000, // Passa de slide a cada 3 segundos
-            disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
 
 </body>
 </html>
